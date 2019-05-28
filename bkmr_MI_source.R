@@ -259,7 +259,7 @@ OverallRiskSummaries.MI <- function(BKMRfits, qs = seq(0.25, 0.75, by = 0.05), q
         var.vec[k] <- drop(cc %*% preds$postvar %*% cc)
       }
       
-      MIest <- Rubin.MI(mean.vec = est.vec, variance.vec = var.vec)
+      if(K==1){MIest <- c(est=est.vec, sd=sqrt(var.vec))}else{MIest <- Rubin.MI(mean.vec = est.vec, variance.vec = var.vec)}
       toreturn[i,"est"] <- MIest["est"]
       toreturn[i,"sd"]  <- MIest["sd"]
       
@@ -354,7 +354,7 @@ VarRiskSummary.MI <- function(whichz = 1, BKMRfits, Z.MI, qs.diff = c(0.25, 0.75
       est.vec[k] <- drop(cc %*% preds$postmean)
       var.vec[k] <- drop(cc %*% preds$postvar %*% cc)
     }
-    toreturn <- Rubin.MI(mean.vec = est.vec, variance.vec = var.vec)
+    if(K==1){toreturn <- c(est=est.vec, sd=sqrt(var.vec))}else{toreturn <- Rubin.MI(mean.vec = est.vec, variance.vec = var.vec)}
   } else stop("method must be one of c('approx', 'exact')")
   toreturn
 }
