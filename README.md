@@ -1,5 +1,5 @@
 ****************************************************
-BKMR plot functions for multiply imputed data
+#BKMR plot functions for multiply imputed data
 ****************************************************
 
 Code developed by:   Katrina Devick (kdevick@hsph.harvard.edu)
@@ -7,14 +7,14 @@ Last updated:   28 March 2019
 
 
 ******************
-Getting Started
+##Getting Started
 ******************
 
 The files example_code_for_MI_BKMR_fits.R and bkmr_MI_source.R that can be downloaded from the repository combine information from multiple Bayesian kernel machine regression (BKMR) models fit using the bkmr R package (Bobb et al. 2015, Valeri et al. 2017, Bobb et al. 2018, Anglen Bauer et al. 2019).  The file bkmr_MI_source.R contains functions to be used with MI BMKR fits to create a data frame for plotting with ggplot. The file example_code_for_MI_BKMR.R shows an example of how the functions are used with simulated data (stored in .RData file BKMRfit_MI_500.RData).
 
 
 *******************
-Important Notes
+##Important Notes
 *******************
   
 1) This code assumes you have K BKMR fits and that each of these fits were ran for the same number if MCMC iterations 
@@ -24,7 +24,7 @@ Important Notes
 
 
 **************
-References 
+##References 
 **************
 Anglen Bauer J, Devick KL, Bobb JF, Coull BA, Zoni S, Fedrighi C, Benedetti C, Guazzetti S, White R, Bellinger D, Yang Q, Webster T, Wright RO, Smith D, Lucchini R, Claus Henn. Associations from a mixture of manganese, lead, copper and chromium and adolescent neurobehavior. 
 
